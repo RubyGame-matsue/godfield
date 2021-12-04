@@ -8,11 +8,17 @@ require_remote 'init.rb'
 require_remote 'game.rb'
 require_remote 'result.rb'
 
+player=Player.new()
+com = Com.new()
+
 Window.load_resources do
     Window.width  = 800
     Window.height = 600
+
+    
+
     Window.loop do
-        #init()
+        init()
         #home()
         #game()
         #result()
