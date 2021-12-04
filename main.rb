@@ -10,14 +10,18 @@ require_remote 'result.rb'
 
 player = Player.new
 com = Com.new
-
+Image.register(:sword, 'images/sword.png') 
+#sprite = sword.image
 Window.load_resources do
     Window.width  = 800
     Window.height = 600
+
+    sword = Weapon.new(0,0,Image[:sword])
     Window.loop do
-        init()
+        #init()
         #home()
         #game()
         #result()
+        Sprite.draw(sword)
     end
 end
