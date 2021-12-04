@@ -1,12 +1,12 @@
 include DXOpal
 require 'dxopal'
-require_relative 'card'
-require_relative 'player'
-require_relative 'com'
-require_relative 'init'
-#require_relative 'home'
-require_relative 'game'
-require_relative 'result'
+require_remote 'card.rb'
+require_remote 'player.rb'
+require_remote 'com.rb'
+require_remote 'init.rb'
+#require_remote 'home.rb'
+require_remote 'game.rb'
+require_remote 'result.rb'
 
 Window.loop do
     init()
