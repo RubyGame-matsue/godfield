@@ -8,9 +8,13 @@ require_remote 'init.rb'
 require_remote 'game.rb'
 require_remote 'result.rb'
 
-Window.loop do
-    init()
-    home()
-    game()
-    result()
+Window.load_resources do
+    Window.width  = 800
+    Window.height = 600
+    Window.loop do
+        #init()
+        #home()
+        #game()
+        #result()
+    end
 end
