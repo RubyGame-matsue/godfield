@@ -6,7 +6,7 @@ require_remote 'com.rb'
 player=Player.new()
 com=Com.new()
 font = Font.new(32)
-
+color = C_WHITE
 
 Window.load_resources do
     Window.width  = 800
@@ -20,6 +20,7 @@ Window.load_resources do
         #geme
         turn = 0
         Window.loop do
+            Window.draw_box_fill(0, 0, 600, 800, C_WHITE, 0)
             if player.hp<=0 || com.hp<=0 
                 break
             end
@@ -28,9 +29,10 @@ Window.load_resources do
                 turn=1 
             end
             if turn==1 #com
-                Window.draw_font(200, 100, "#{player.hp}", font, {:color => C_GREEN})
+                Window.draw_font(300, 100, "#{player.hp}", font, {:color => C_GREEN})
                 turn=0
             end
+            #sleep 1
         end
         #result()
     end
