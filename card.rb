@@ -1,4 +1,14 @@
-class Weapon
+Image.register(:sword, 'images/sword.png') 
+Image.register(:axe, 'images/axe.png') 
+Image.register(:hammer, 'images/hammer.png') 
+Image.register(:nife, 'images/nife.png') 
+Image.register(:helmet, 'images/helmet.png') 
+Image.register(:chest, 'images/chest.png') 
+Image.register(:boots, 'images/boots.png') 
+Image.register(:hand, 'images/hand.png') 
+Image.register(:smile_water, 'images/smile_water.png') 
+Image.register(:smile_flowere, 'images/smile_flower.png') 
+class Weapon < Sprite
     attr_accessor :name,:attack,:attribute,:image
     def initialize(name,attack,attribute,image)
         @name = name
@@ -8,7 +18,7 @@ class Weapon
     end
 end
 
-class Armor
+class Armor < Sprite
     attr_accessor :id,:name,:defence,:attribute,:image
     def initialize(name,defence,attribute,image)
         @name = name
@@ -18,7 +28,7 @@ class Armor
     end
 end
 
-class Item
+class Item < Sprite
     attr_accessor :name,:hp,:mp,:image
     def initialize(name,hp,mp,image)
         @name = name
@@ -28,15 +38,15 @@ class Item
     end
 end
 
-sword = Weapon.new("剣",10,0,"sword.png")
-axe = Weapon.new("斧",5,0,"axe.png")
-hammer = Weapon.new("ハンマー",8,0,"hammer.png")
-nife = Weapon.new("ナイフ",2,0,"")
+sword = Weapon.new("剣",10,0,Image[:sword])
+axe = Weapon.new("斧",5,0,Image[:axe])
+hammer = Weapon.new("ハンマー",8,0,Image[:hammer])
+nife = Weapon.new("ナイフ",2,0,Image[:nife])
 
-helmet = Armor.new("ヘルメット",3,0,"helmet.png")
-chest = Armor.new("チェスト",6,0,"chest.png")
-boots = Armor.new("ブーツ",4,0,"boots.png")
-hand = Armor.new("小手",2,0,"hand.png")
+helmet = Armor.new("ヘルメット",3,0,Image[:helmet])
+chest = Armor.new("チェスト",6,0,Image[:chest])
+boots = Armor.new("ブーツ",4,0,Image[:boots])
+hand = Armor.new("小手",2,0,Image[:hand])
 
-smile_water = Item.new("スマイルウォーター",5,0,"smile_water.png")
-smile_flower = Item.new("スマイルの花",0,5,"smile_flower.png")
+smile_water = Item.new("スマイルウォーター",5,0,Image[:smile_waterle])
+smile_flower = Item.new("スマイルの花",0,5,Image[:smile_flowerle])
