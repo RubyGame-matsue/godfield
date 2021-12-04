@@ -8,7 +8,7 @@ require_relative 'init'
 require_relative 'game'
 require_relative 'result'
 
-loop do
+Window.loop do
     init()
     home()
     game()
